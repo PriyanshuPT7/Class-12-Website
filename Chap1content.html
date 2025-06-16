@@ -1,0 +1,249 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Database and Information Topics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    section {
+      background: white;
+      padding: 15px 25px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    ul {
+      margin-top: 0;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Database and Information Topics</h1>
+
+  <section>
+    <h2>Information</h2>
+    <p><strong>Definition:</strong><br>
+      Information refers to processed data that is meaningful and useful for decision-making, problem-solving, and analysis. It provides context to raw data, making it comprehensible and actionable.</p>
+  </section>
+
+  <section>
+    <h2>Features of Information</h2>
+    <ul>
+      <li><strong>Accuracy:</strong> Information must be correct and free from errors.</li>
+      <li><strong>Relevance:</strong> It should be pertinent to the context and needs of the user.</li>
+      <li><strong>Timeliness:</strong> Information must be available when needed.</li>
+      <li><strong>Completeness:</strong> All necessary data should be included.</li>
+      <li><strong>Consistency:</strong> Information should not conflict with other data.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Database and Its Purpose</h2>
+    <p><strong>Definition:</strong><br>
+      A database is an organized collection of data, typically stored and accessed electronically from a computer system.</p>
+    <p><strong>Purpose:</strong></p>
+    <ul>
+      <li>To store large amounts of data efficiently.</li>
+      <li>To allow quick retrieval and manipulation of data.</li>
+      <li>To ensure data integrity and security.</li>
+      <li>To support multiple users and applications.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Terminologies in Database</h2>
+    <ul>
+      <li><strong>Table:</strong> A collection of related data entries consisting of rows and columns.</li>
+      <li><strong>Field:</strong> A single data element; a column in a table.</li>
+      <li><strong>Record:</strong> A complete set of fields; a row in a table.</li>
+      <li><strong>Tuple:</strong> Another term for a record.</li>
+      <li><strong>Object:</strong> An instance of a class in object-oriented databases.</li>
+      <li><strong>Keys:</strong>
+        <ul>
+          <li><strong>Primary Key:</strong> A unique identifier for a record in a table.</li>
+          <li><strong>Foreign Key:</strong> A field in one table that uniquely identifies a row of another table.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data Dictionary</h2>
+    <p>A data dictionary is a centralized repository that defines the structure of the database, including tables, fields, data types, and relationships. It serves as a reference for developers and administrators.</p>
+  </section>
+
+  <section>
+    <h2>Database Management System (DBMS)</h2>
+    <h3>Introduction</h3>
+    <p>A DBMS is software that provides an interface for users and applications to interact with databases, ensuring data is stored, retrieved, and manipulated efficiently.</p>
+
+    <h3>Objectives</h3>
+    <ul>
+      <li>To manage data efficiently.</li>
+      <li>To ensure data integrity and security.</li>
+      <li>To provide a user-friendly interface for data operations.</li>
+    </ul>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li><strong>Data Redundancy Control:</strong> Minimizes duplication of data.</li>
+      <li><strong>Data Integrity:</strong> Ensures accuracy and consistency.</li>
+      <li><strong>Security:</strong> Protects data from unauthorized access.</li>
+      <li><strong>Backup and Recovery:</strong> Facilitates data restoration in case of failure.</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li><strong>Complexity:</strong> Requires specialized knowledge to manage.</li>
+      <li><strong>Cost:</strong> Can be expensive to implement and maintain.</li>
+      <li><strong>Performance:</strong> May have overhead due to additional layers of abstraction.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Types of Database Models</h2>
+    <h3>1. Hierarchical Model</h3>
+    <p>Data is organized in a tree-like structure where each record has a single parent. Suitable for applications with a clear hierarchical relationship.</p>
+
+    <h3>2. Network Model</h3>
+    <p>An extension of the hierarchical model, allowing records to have multiple parent records, forming a graph structure. More flexible but complex.</p>
+
+    <h3>3. Relational Model</h3>
+    <p>Data organized into tables (relations), with relationships established using keys. Most widely used model.</p>
+
+    <h3>4. Entity-Relationship Model</h3>
+    <p>Uses entities (objects) and relationships to represent data and their connections. Often used in database design.</p>
+  </section>
+
+  <section>
+    <h2>Integrity Constraints and Types</h2>
+    <ul>
+      <li><strong>Domain Integrity:</strong> Ensures data entered into a field is of the correct type and range.</li>
+      <li><strong>Entity Integrity:</strong> Ensures each record has a unique identifier (primary key).</li>
+      <li><strong>Referential Integrity:</strong> Ensures foreign keys correctly reference existing records.</li>
+      <li><strong>User-Defined Integrity:</strong> Enforces specific business rules.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Normalization</h2>
+    <h3>Introduction</h3>
+    <p>Normalization is the process of organizing data to reduce redundancy and improve data integrity.</p>
+
+    <h3>Normal Forms</h3>
+    <ul>
+      <li><strong>1NF (First Normal Form):</strong> Ensures all columns contain atomic values and records are unique.</li>
+      <li><strong>2NF (Second Normal Form):</strong> Removes partial dependencies; all non-key attributes depend on the whole primary key.</li>
+      <li><strong>3NF (Third Normal Form):</strong> Removes transitive dependencies; non-key attributes are independent of each other.</li>
+    </ul>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li>Reduces data redundancy.</li>
+      <li>Improves data integrity.</li>
+      <li>Simplifies maintenance.</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li>May lead to complex queries.</li>
+      <li>Can require more joins, impacting performance.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Centralized and Distributed Database</h2>
+    <h3>Centralized Database</h3>
+    <p>Data stored at a single location.</p>
+    <ul>
+      <li><strong>Advantages:</strong> Easier to manage, lower cost.</li>
+      <li><strong>Disadvantages:</strong> Single point of failure, can become a bottleneck.</li>
+    </ul>
+
+    <h3>Distributed Database</h3>
+    <p>Data stored across multiple locations.</p>
+    <ul>
+      <li><strong>Advantages:</strong> Improved performance, availability, scalability.</li>
+      <li><strong>Disadvantages:</strong> Complex management, potential consistency issues.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Database Security</h2>
+    <h3>Introduction</h3>
+    <p>Database security protects databases from unauthorized access, misuse, or corruption.</p>
+
+    <h3>Challenges</h3>
+    <ul>
+      <li>Ensuring data privacy.</li>
+      <li>Protecting against cyberattacks.</li>
+      <li>Managing user access and permissions.</li>
+    </ul>
+
+    <h3>Security Measures</h3>
+    <ul>
+      <li><strong>Encryption:</strong> Protects data confidentiality.</li>
+      <li><strong>Authentication:</strong> Verifies user identities.</li>
+      <li><strong>Authorization:</strong> Grants appropriate access levels.</li>
+      <li><strong>Auditing:</strong> Tracks database activities.</li>
+    </ul>
+
+    <h3>Roles of DBA (Database Administrator)</h3>
+    <ul>
+      <li>Designing database structure.</li>
+      <li>Implementing and maintaining DBMS.</li>
+      <li>Monitoring performance and security.</li>
+      <li>Backup and recovery of data.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Practical Topics</h2>
+
+    <h3>DDL and DML Languages</h3>
+    <ul>
+      <li><strong>DDL (Data Definition Language):</strong> Defines and manages database structures (e.g., <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>).</li>
+      <li><strong>DML (Data Manipulation Language):</strong> Manages data within those structures (e.g., <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>).</li>
+    </ul>
+
+    <h3>SQL Data Types</h3>
+    <ul>
+      <li><code>CHAR</code>: Fixed-length character string.</li>
+      <li><code>VARCHAR</code>: Variable-length character string.</li>
+      <li><code>BINARY</code>: Fixed-length binary data.</li>
+      <li><code>VARBINARY</code>: Variable-length binary data.</li>
+      <li><code>TINYBLOB</code>: Binary large object (max 255 bytes).</li>
+      <li><code>TINYTEXT</code>: Text string (max 255 characters).</li>
+      <li><code>TEXT</code>: Text string (max 65,535 characters).</li>
+      <li><code>LONGTEXT</code>: Text string (max 4,294,967,295 characters).</li>
+      <li><code>ENUM</code>: Enumeration of predefined string values.</li>
+      <li><code>BIT</code>: Bit-field type.</li>
+      <li><code>TINYINT</code>: Very small integer.</li>
+      <li><code>BOOLEAN</code>: True or false value.</li>
+      <li><code>INTEGER</code>: Standard integer.</li>
+      <li><code>FLOAT</code>: Single-precision floating-point number.</li>
+      <li><code>DOUBLE</code>: Double-precision floating-point number.</li>
+      <li><code>DECIMAL</code>: Exact numeric data type.</li>
+      <li><code>DATE</code>: Date in 'YYYY-MM-DD' format.</li>
+      <li><code>DATETIME</code>: Date and time in 'YYYY-MM-DD HH:MM:SS' format.</li>
+    </ul>
+  </section>
+
+</body>
+</html>
