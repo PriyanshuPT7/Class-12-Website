@@ -1,0 +1,130 @@
+<html>
+<head>
+  <title>Unit 2 – C Programming</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3, h4 {
+      color: #2c3e50;
+    }
+    pre {
+      background-color: #f9f9f9;
+      border-left: 5px solid #3498db;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    p {
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Unit 2 – C Programming</h1>
+
+    <h2>1. Working with a Function</h2>
+    <h3>a. Define Function</h3>
+    <p>A function is a block of code that performs a specific task. It allows code reusability and modularity in programming.</p>
+
+    <h3>b. Syntax of a Function</h3>
+    <pre><code>return_type function_name(parameters) {
+    // code to execute
+}</code></pre>
+
+    <h3>c. Types of Functions</h3>
+    <ul>
+      <li><strong>Library Functions:</strong> Built-in functions like <code>printf()</code>, <code>scanf()</code></li>
+      <li><strong>User-defined Functions:</strong> Created by programmers for custom tasks</li>
+    </ul>
+
+    <h3>d. Components of Function</h3>
+    <p><strong>i. Function Prototype:</strong> Declaration of the function before <code>main()</code></p>
+    <pre><code>int add(int, int);</code></pre>
+
+    <p><strong>ii. Function Call:</strong> Invoking the function to execute</p>
+    <pre><code>add(5, 10);</code></pre>
+
+    <p><strong>iii. Function Definition:</strong> Actual implementation of function</p>
+    <pre><code>int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+    <p><strong>iv. Return Type:</strong> The type of value returned (e.g. <code>int</code>, <code>void</code>)</p>
+
+    <h2>2. Categories of Functions with Example</h2>
+    <h4>i. Function with return type but no arguments</h4>
+    <pre><code>int getValue() {
+    int x = 10;
+    return x;
+}</code></pre>
+
+    <h4>ii. Function with return type with arguments</h4>
+    <pre><code>int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+    <h4>iii. Function with no return type and no arguments</h4>
+    <pre><code>void greet() {
+    printf("Hello, World!");
+}</code></pre>
+
+    <h4>iv. Function with no return type with arguments</h4>
+    <pre><code>void display(int n) {
+    printf("Number: %d", n);
+}</code></pre>
+
+    <h2>3. Storage Classes</h2>
+    <h4>i. Automatic (auto)</h4>
+    <pre><code>void func() {
+    auto int a = 10;
+}</code></pre>
+
+    <h4>ii. External (extern)</h4>
+    <pre><code>extern int x;</code></pre>
+
+    <h4>iii. Register (register)</h4>
+    <pre><code>register int speed = 100;</code></pre>
+
+    <h4>iv. Static (static)</h4>
+    <pre><code>static int count = 0;</code></pre>
+
+    <h2>4. Recursive Function with Syntax and Examples</h2>
+    <p>A recursive function is a function that calls itself to solve a problem in parts.</p>
+    <pre><code>int factorial(int n) {
+    if(n == 0) return 1;
+    else return n * factorial(n - 1);
+}</code></pre>
+
+    <h4>Syntax of Recursive Function</h4>
+    <pre><code>return_type function_name(parameters) {
+    if(condition)
+        return base_case;
+    else
+        return function_name(updated_parameters);
+}</code></pre>
+
+    <h2>5. Demonstration of Passing Array to a Function</h2>
+    <pre><code>void printArray(int arr[], int size) {
+    for(int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+}
+
+int main() {
+    int nums[] = {1, 2, 3, 4, 5};
+    printArray(nums, 5);
+    return 0;
+}</code></pre>
+  </div>
+</body>
+</html>

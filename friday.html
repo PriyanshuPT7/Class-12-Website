@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ecf0f1;
+        }
+        .example {
+            background-color: #e8f8f5;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #1abc9c;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        pre {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Database Management System (DBMS) Notes</h1>
+
+    <h2>1. What is Database and DBMS?</h2>
+    <p><strong>Database:</strong> A structured collection of data that allows easy access, management, and updating.</p>
+    <p><strong>DBMS:</strong> Software to create, retrieve, update, and manage data. E.g., MySQL, Oracle.</p>
+    <p><strong>Advantages:</strong> Reduces redundancy, ensures integrity, enables data sharing, supports backup, easy querying.</p>
+    <p><strong>Disadvantages:</strong> Expensive, complex, requires trained users, may perform slow for small apps.</p>
+
+    <h2>2. File Processing System vs DBMS</h2>
+    <table>
+        <tr><th>File Processing System</th><th>DBMS</th></tr>
+        <tr><td>Data stored in separate files</td><td>Integrated data system</td></tr>
+        <tr><td>High redundancy</td><td>Minimal redundancy</td></tr>
+        <tr><td>Complex data access</td><td>Easy access via SQL</td></tr>
+        <tr><td>No central control</td><td>Centralized control</td></tr>
+    </table>
+
+    <h2>3. DBMS Models with Advantages & Disadvantages</h2>
+    <p><strong>Hierarchical Model:</strong> Tree structure. <em>Adv:</em> Simple. <em>Disadv:</em> Rigid.</p>
+    <p><strong>Network Model:</strong> Graph structure. <em>Adv:</em> Flexible. <em>Disadv:</em> Complex.</p>
+    <p><strong>Relational Model:</strong> Tables. <em>Adv:</em> Easy to use. <em>Disadv:</em> Slower for large data.</p>
+    <p><strong>Object-Oriented Model:</strong> Objects. <em>Adv:</em> Good for complex data. <em>Disadv:</em> Less supported.</p>
+
+    <h2>4. Relational Database</h2>
+    <p>Data organized in tables with relationships via keys. Easier, scalable, and uses SQL.</p>
+
+    <h2>5. Data Redundancy</h2>
+    <p><strong>Definition:</strong> Repetition of data across places.</p>
+    <p><strong>DBMS Solution:</strong> Central data, normalization, dependencies.</p>
+
+    <h2>6. Centralized vs Distributed Database</h2>
+    <table>
+        <tr><th>Centralized</th><th>Distributed</th></tr>
+        <tr><td>One location</td><td>Multiple locations</td></tr>
+        <tr><td>Easy to manage</td><td>Complex to manage</td></tr>
+        <tr><td>Failure risk high</td><td>Fault-tolerant</td></tr>
+        <tr><td>Slow remote access</td><td>Fast access</td></tr>
+    </table>
+
+    <h2>7. Database Administrator (DBA)</h2>
+    <p><strong>DBA:</strong> Person managing database systems.</p>
+    <p><strong>Responsibilities:</strong> Design, security, access control, performance, backups, updates.</p>
+
+    <h2>8. Normalization</h2>
+    <p>Process to reduce redundancy.</p>
+    <p><strong>1NF:</strong> Atomic values, no repeating groups.</p>
+    <div class="example">
+        Unnormalized: (Ram, Math, Science)<br>
+        1NF:<br> Ram, Math<br> Ram, Science
+    </div>
+    <p><strong>2NF:</strong> 1NF + no partial dependency.</p>
+    <p><strong>3NF:</strong> 2NF + no transitive dependency.</p>
+    <div class="example">
+        DeptID &rarr; DeptName moved to a separate table.
+    </div>
+
+    <h2>9. Keys</h2>
+    <p><strong>Primary Key:</strong> Uniquely identifies records. E.g., StudentID</p>
+    <p><strong>Foreign Key:</strong> Refers to primary key in another table. E.g., DeptID</p>
+    <p><strong>Candidate Key:</strong> All possible unique identifiers. E.g., Email, StudentID</p>
+
+    <h2>10. SQL and Components</h2>
+    <p><strong>SQL:</strong> Structured Query Language for managing relational databases.</p>
+    <p><strong>Components:</strong></p>
+    <ul>
+        <li><strong>DDL:</strong> CREATE, ALTER, DROP</li>
+        <li><strong>DML:</strong> SELECT, INSERT, UPDATE, DELETE</li>
+        <li><strong>DCL:</strong> GRANT, REVOKE</li>
+        <li><strong>TCL:</strong> COMMIT, ROLLBACK</li>
+    </ul>
+    <p><strong>Common Functions:</strong> SUM(), COUNT(), LENGTH(), NOW()</p>
+
+    <h2>11. Write SQL commands to perform the following operations:-</h2>
+    <p><strong>a. Create a table named students:</strong></p>
+    <pre><code>CREATE TABLE students (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100),
+    Class VARCHAR(50),
+    Marks INT(10)
+);</code></pre>
+<img src="Capture.PNG">
+<img src="table format.PNG">
+
+    <p><strong>b. Insert records into the students table:</strong></p>
+    <pre><code>INSERT INTO students (Name, Class, Marks) VALUES
+('Tendulkar','12I', 98),
+('Dhoni','11I',94),
+('Kohli','10C', 65),
+('Asif','8G',67),
+('Perry','10A',73)
+;</code></pre>
+<img src="input data.PNG">
+<img src="input data output.PNG">
+
+
+    <p><strong>c. Display all records from the students table:</strong></p>
+    <pre><code>SELECT * FROM students;</code></pre>
+    <img src="display all data.PNG">
+
+    <p><strong>d. Update marks of 'Anita' to 85:</strong></p>
+    <pre><code>UPDATE students
+SET Marks = 85
+WHERE Name = 'Anita';</code></pre>
+<img src="update data of anita.PNG">
+<img src="updated data.PNG">
+    <p><strong>e. Delete record of student with id = 3:</strong></p>
+    <pre><code>DELETE FROM students
+WHERE S_ID ="3";</code></pre>
+<img src="delete 3.PNG">
+<img src="delete 3 output.PNG">
+</div>
+<h2>12. Definitions of Key Terms</h2>
+<p style="margin-bottom: 10px;"><strong>a. Data Dictionary:</strong> A centralized repository of information about data such as meaning, relationships, origin, usage, and format.</p>
+<p style="margin-bottom: 10px;"><strong>b. Primary Key:</strong> A field or combination of fields that uniquely identifies each record in a table.</p>
+<p style="margin-bottom: 10px;"><strong>c. Relationship:</strong> An association among entities or tables that defines how data in one table relates to data in another.</p>
+<p style="margin-bottom: 10px;"><strong>d. Data Manipulation Language (DML):</strong> A subset of SQL used to add, retrieve, and modify data. Examples: SELECT, INSERT, UPDATE, DELETE.</p>
+<p style="margin-bottom: 10px;"><strong>e. Structured Query Language (SQL):</strong> A standard programming language used to manage and manipulate relational databases.</p>
+<p style="margin-bottom: 10px;"><strong>f. Data Integrity:</strong> The accuracy, consistency, and reliability of data stored in a database.</p>
+<p style="margin-bottom: 10px;"><strong>g. Data Definition Language (DDL):</strong> A subset of SQL used to define database schema. Examples: CREATE, ALTER, DROP.</p>
+<p style="margin-bottom: 10px;"><strong>h. Data Security:</strong> The protection of data against unauthorized access, corruption, or theft.</p>
+<p style="margin-bottom: 10px;"><strong>i. Database System:</strong> A combination of database, DBMS, and associated applications that interact with the database.</p>
+</div>
+</body>
+</html>
+</body>
+</html>
