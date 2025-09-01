@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 1: Database Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+      margin-top: 1.2em;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #ecf0f1;
+    }
+
+    pre {
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 3px solid #3498db;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+
+    .diagram {
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 3px solid #2c3e50;
+      margin: 1em 0;
+      white-space: pre;
+      font-family: monospace;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 1em 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chapter 1: Database Management System</h1>
+
+    <h2>1. Data, Information & Features</h2>
+    <p>Data are raw facts (e.g., numbers, text). Information is processed, organized data that carries meaning.</p>
+    <p>Features of good information: accurate, complete, timely, relevant, and understandable.</p>
+
+    <h2>2. Database & Its Purpose</h2>
+    <p>A database is a structured collection of related data stored to minimize redundancy and support efficient retrieval.</p>
+    <p>Purpose: reliable storage, integrity enforcement, multi-user access, backup/recovery, and easy querying.</p>
+
+    <h2>3. Terminologies in Database</h2>
+    <ul>
+      <li><strong>Table:</strong> Rows & columns storing related records.</li>
+      <li><strong>Field/Column:</strong> Named attribute in a table.</li>
+      <li><strong>Record/Row/Tuple:</strong> One complete set of field values.</li>
+      <li><strong>Object:</strong> In OO-DBs, combines data with behavior.</li>
+      <li><strong>Key:</strong> Attribute(s) that uniquely identify a record.</li>
+    </ul>
+
+    <h2>4. Data Types</h2>
+    <table>
+      <tr><th>Type</th><th>Description</th></tr>
+      <tr><td>INT</td><td>Whole numbers</td></tr>
+      <tr><td>FLOAT/DOUBLE</td><td>Approximate real numbers</td></tr>
+      <tr><td>CHAR(n)</td><td>Fixed-length text</td></tr>
+      <tr><td>VARCHAR(n)</td><td>Variable-length text</td></tr>
+      <tr><td>DATE, TIME, DATETIME</td><td>Temporal values</td></tr>
+      <tr><td>BOOLEAN</td><td>TRUE/FALSE</td></tr>
+      <tr><td>BLOB</td><td>Binary large object</td></tr>
+    </table>
+
+    <h2>5. Data Dictionary</h2>
+    <p>Repository of metadata: definitions of tables, columns, data types, relationships, constraints, usage and formats.</p>
+
+    <h2>6. DBMS – Introduction, Objectives, Pros & Cons</h2>
+    <h3>Introduction</h3>
+    <p>Software for defining, creating, querying, updating and administering databases (e.g., MySQL, Oracle).</p>
+
+    <h3>Objectives</h3>
+    <ul>
+      <li>Efficient data storage & retrieval</li>
+      <li>Minimize redundancy</li>
+      <li>Ensure integrity & consistency</li>
+      <li>Support concurrent multi-user access</li>
+      <li>Backup & recovery</li>
+    </ul>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li>Centralized control</li>
+      <li>Reduced duplication</li>
+      <li>Improved integrity</li>
+      <li>Powerful queries (SQL)</li>
+      <li>Security & auditing</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li>High setup cost</li>
+      <li>Complex administration</li>
+      <li>Requires trained personnel</li>
+      <li>Overhead for small datasets</li>
+    </ul>
+
+    <h2>7. Database Models</h2>
+    <h3>Hierarchical Model</h3>
+    <p>Tree-like parent–child structure. Adv: simple navigation. Disadv: rigid, poor many-to-many support.</p>
+
+    <h3>Network Model</h3>
+    <p>Graph structure. Adv: flexible many-to-many. Disadv: complex schemas & queries.</p>
+
+    <h3>Relational Model</h3>
+    <p>Tables with rows & columns. Adv: intuitive, SQL support. Disadv: joins can be slow on large data.</p>
+
+    <h3>Object-Relational Model</h3>
+    <p>Extends relational with object features. Adv: complex data & inheritance. Disadv: less standardized support.</p>
+
+    <h2>8. Integrity Constraints</h2>
+    <ul>
+      <li><strong>Domain:</strong> Valid set/range for an attribute.</li>
+      <li><strong>Entity:</strong> Unique identification (Primary Key).</li>
+<li><strong>Referential:</strong> Foreign key must match a primary key.</li>
+<li><strong>Key:</strong> Defines unique identifiers (Primary, Candidate, Alternate).</li>
+    </ul>
+<ol><li>Primary Key: A unique identifier for a record in a table.</li>
+<li>Foreign Key: A field in one table that uniquely identifies a row of another table.</li></ol>
+
+    <h2>9. Normalization</h2>
+    <h3>1NF</h3>
+    <p>Ensures all columns contain atomic values and records are unique.</p>
+
+    <h3>2NF</h3>
+    <p>Removes partial dependencies; all non-key attributes depend on the whole primary key.</p>
+
+    <h3>3NF</h3>
+    <p>Removes transitive dependencies; non-key attributes are independent of each other.</p>
+
+    <h3>Pros & Cons</h3>
+    <ul>
+      <li>Adv: reduces redundancy, improves integrity.</li>
+      <li>Disadv: more tables, complex joins.</li>
+    </ul>
+
+    <h2>10. Centralized vs Distributed</h2>
+    <h3>ASCII Diagram</h3>
+    <div class="diagram">
+Centralized:
+  [Client]
+     |
+  [Server]
+     |
+  [Client]
+
+Distributed:
+   [Client]—[Node A]—[Client]
+             \
+              [Node B]—[Client]
+    </div>
+    <img src="cvd db.jpg">
+
+    <h2>11. Database Security</h2>
+    <h3>Challenges</h3>
+    <ul>
+      <li>Unauthorized access</li>
+      <li>SQL injection</li>
+      <li>Data leakage</li>
+      <li>Insider threats</li>
+    </ul>
+
+    <h3>Measures</h3>
+    <ul>
+      <li>Access control & authentication</li>
+      <li>Encryption at rest & in transit</li>
+      <li>Audit trails & monitoring</li>
+      <li>Regular patches & scans</li>
+    </ul>
+
+    <h2>12. DBA & Roles</h2>
+    <p>DBA installs, configures, maintains the DBMS; designs schemas; tunes performance; enforces security; performs backups and recovery.</p>
+
+    <h2>13. ER Diagrams</h2>
+    <p>Graphical representation of entities and relationships.</p>
+    <img src="SAMPLE ER Diagram.avif">
+
+    <h3>Components</h3>
+    <ul>
+      <li><strong>Entity:</strong> Rectangle</li>
+      <li><strong>Attribute:</strong> Oval</li>
+      <li><strong>Relationship:</strong> Diamond</li>
+      <li><strong>Cardinality:</strong> 1:1, 1:M, M:N (crow’s feet notation)</li>
+    </ul>
+
+    <h2>14. SQL (DDL & DML)</h2>
+    <h3>DDL</h3>
+    <ul>
+      <li>CREATE</li>
+      <li>ALTER</li>
+      <li>DROP</li>
+    </ul>
+    <h3>DML</h3>
+    <ul>
+      <li>SELECT</li>
+      <li>INSERT</li>
+      <li>UPDATE</li>
+      <li>DELETE</li>
+    </ul>
+
+    <h2>15. Constraints & Operators</h2>
+    <ul>
+      <li><strong>NOT NULL:</strong> Disallow NULL values</li>
+      <li><strong>UNIQUE:</strong> No duplicate values</li>
+      <li><strong>PRIMARY KEY:</strong> Unique + NOT NULL</li>
+      <li><strong>AUTO_INCREMENT:</strong> Auto-increment numeric key</li>
+    </ul>
+
+    <h3>Operators</h3>
+    <ul>
+      <li><code>AND</code> – all conditions true</li>
+      <li><code>OR</code> – any condition true</li>
+      <li><code>NOT</code> – negates a condition</li>
+    </ul>
+
+    <h2>16. WHERE & ORDER BY</h2>
+    <pre><code>SELECT Name, Age
+FROM Students
+WHERE Age &gt; 18
+ORDER BY Name DESC;
+    </code></pre>
+
+    <h2>17. SQL JOINs</h2>
+    <pre><code>-- INNER JOIN
+SELECT e.id, e.name, d.dept_name
+FROM Employee e
+INNER JOIN Department d
+  ON e.dept_id = d.id;
+
+-- LEFT JOIN
+SELECT e.id, e.name, d.dept_name
+FROM Employee e
+LEFT JOIN Department d
+  ON e.dept_id = d.id;
+
+-- RIGHT JOIN
+SELECT e.id, e.name, d.dept_name
+FROM Employee e
+RIGHT JOIN Department d
+  ON e.dept_id = d.id;
+
+-- FULL OUTER JOIN
+SELECT e.id, e.name, d.dept_name
+FROM Employee e
+FULL OUTER JOIN Department d
+  ON e.dept_id = d.id;
+    </code></pre>
+    <img src="SQL join types.png">
+  </div>
+</body>
+</html>
